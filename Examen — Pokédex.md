@@ -4,7 +4,7 @@
 **Cuatrimestre:** C2 2026  
 **Tema:** Pokédex  
 **Lenguaje:** Python 3  
-**Puntaje:** 100 puntos
+**Puntaje:** 100 puntos.
 
 
 
