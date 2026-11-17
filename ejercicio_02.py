@@ -6,13 +6,12 @@ class PokemonNoEncontrado(Exception):
 
 
 class Pokedex:
-    """Catálogo de Pokémon, guardado en una lista."""
 
     def __init__(self):
         self._pokemones = []
 
     def agregar(self, pokemon):
-        """Si ya hay uno con ese id lo reemplaza, si no lo agrega al final."""
+        # si ya hay uno con ese id lo reemplaza en el mismo lugar
         for i in range(len(self._pokemones)):
             if self._pokemones[i].id == pokemon.id:
                 self._pokemones[i] = pokemon
@@ -26,15 +25,14 @@ class Pokedex:
         raise PokemonNoEncontrado(f"No existe el Pokémon con id {id}.")
 
     def listar(self):
-        """Devuelve una copia para que no se pueda modificar la lista de afuera."""
-        return list(self._pokemones)
+        return list(self._pokemones)   # devuelvo una copia
 
     def cantidad(self):
         return len(self._pokemones)
 
 
 def pokedex_del_examen():
-    """Arma la Pokédex con los datos del examen, la uso para probar."""
+    # datos del examen, la uso para probar los ejercicios
     pokedex = Pokedex()
     pokedex.agregar(Pokemon(1, "Bulbasaur", "Planta", "Veneno", 45, 49, 49, 45, 1))
     pokedex.agregar(Pokemon(2, "Ivysaur", "Planta", "Veneno", 60, 62, 63, 60, 1))
