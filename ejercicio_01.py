@@ -35,8 +35,8 @@ class Pokemon:
 
 
 # TEORIA
-# La identidad es el id; nombre, tipos, estadísticas y generación son estado.
-# No: la identidad no debería cambiar después de construido el objeto, por eso id es de solo lectura.
+# La identidad es el id, lo demás (nombre, tipos, stats y generación) es el estado.
+# No, el id no debería poder cambiar una vez creado el Pokémon.
 
 
 if __name__ == "__main__":
