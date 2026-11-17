@@ -50,7 +50,7 @@ def pokedex_del_examen():
 
 
 # TEORIA
-# Quien llama no tiene que acordarse de chequear None: si el id no está, se entera en ese momento con un error claro que puede atrapar con try/except, en vez de que el None siga de largo y falle más adelante.
+# Que no tiene que andar revisando si le volvió None: si el id no existe salta el error en el momento y lo puede manejar con un try/except.
 
 
 if __name__ == "__main__":
