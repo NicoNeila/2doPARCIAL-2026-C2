@@ -43,4 +43,5 @@ class HistorialAcciones:
 
 
 # TEORIA
-# Queda B en el tope, porque se saca C que fue el último que entró. Se llama LIFO: el último que entra es el primero que sale.
+# Queda B en el tope. Porque se saca C que fue el último que entró. 
+# Se llama LIFO. El último que entra es el primero que sale.
