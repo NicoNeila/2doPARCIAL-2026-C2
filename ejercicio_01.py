@@ -1,11 +1,10 @@
 class Pokemon:
-    """Pokémon de la Pokédex."""
 
     def __init__(self, id, nombre, tipo1, tipo2, hp, ataque, defensa, velocidad, generacion):
-        self._id = id          # el id no se puede cambiar después
+        self._id = id
         self.nombre = nombre
         self.tipo1 = tipo1
-        self.tipo2 = tipo2     # si no tiene segundo tipo es ""
+        self.tipo2 = tipo2
         self.hp = hp
         self.ataque = ataque
         self.defensa = defensa
@@ -21,23 +20,15 @@ class Pokemon:
             return f"#{self.id} {self.nombre} ({self.tipo1})"
         return f"#{self.id} {self.nombre} ({self.tipo1}/{self.tipo2})"
 
-    def __repr__(self):
-        return self.__str__()
-
     def __eq__(self, otro):
         if not isinstance(otro, Pokemon):
             return False
         return self.id == otro.id
 
     def __hash__(self):
-        # si defino __eq__ también tengo que definir __hash__, uso el id
         return hash(self.id)
 
 
 # TEORIA
 # La identidad es el id, lo demás (nombre, tipos, stats y generación) es el estado.
 # No, el id no debería poder cambiar una vez creado el Pokémon.
-
-
-if __name__ == "__main__":
-    bulbasaur = Pokemon(1, "Bulbasaur", "Planta", "Veneno",
